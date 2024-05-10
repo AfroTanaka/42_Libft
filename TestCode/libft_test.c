@@ -9,6 +9,6 @@
 int main()
 {
 	// ft_isalpha Test
-	if ((int) testRunner(TestIsalpha))
-		puts("\x1b[46mSuccess\x1b[0m");
+	if (!((int) testRunner(TestIsalpha)))
+		puts("\x1b[36mSuccess\x1b[0m");
 }

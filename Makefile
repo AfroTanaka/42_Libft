@@ -3,15 +3,15 @@ SRCS = ft_isalpha.c
 OBJS = ft_isalpha.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-TEST = libft_test.c
-TESTRUN = testRunner.c
+TEST = TestCode/libft_test.c TestCode/testFtIsalpha.c
+TESTRUN = TestRunner/testRunner.c
 
 re: fclean all
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
 
 $(OBJS):
 	$(CC) $(CFLAGS) -c $(SRCS)

@@ -1,3 +1,5 @@
+#include "libft_test.h"
+
 unsigned int TestIsalpha(void)
 {
 	// Case 1

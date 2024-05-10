@@ -1,11 +1,10 @@
-#include "testRunner.h"
-#include "libft.h"
 #include "libft_test.h"
+#include "../TestRunner/testRunner.h"
+#include "../libft.h"
 
 #include <stdio.h>
 #include <limits.h>
 #include <ctype.h>
-
 
 int main()
 {

@@ -16,4 +16,7 @@ unsigned int TestIsdigit(void);
 
 // Test ft_isalnum()
 unsigned int TestIsalnum(void);
+
+// Test ft_isascii()
+unsigned int TestIsascii(void);
 #endif

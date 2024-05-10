@@ -34,10 +34,6 @@ unsigned int TestIsalnum(void)
 	TEST_ASSERT_EQUALS(isalnum(INT_MIN - 1), ft_isalnum(INT_MIN - 1));
 
 	// Case 8
-	puts("\x1b[33mINT_MIN - 1\x1b[0m");
-	TEST_ASSERT_EQUALS(isalnum(INT_MIN - 1), ft_isalnum(INT_MIN - 1));
-
-	// Case 9
 	puts("\x1b[33mINT_MAX + 1\x1b[0m");
 	TEST_ASSERT_EQUALS(isalnum(INT_MAX + 1), ft_isalnum(INT_MAX + 1));
 	*/

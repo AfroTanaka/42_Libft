@@ -34,10 +34,6 @@ unsigned int TestIsdigit(void)
 	TEST_ASSERT_EQUALS(isdigit(INT_MIN - 1), ft_isdigit(INT_MIN - 1));
 
 	// Case 8
-	puts("\x1b[33mINT_MIN - 1\x1b[0m");
-	TEST_ASSERT_EQUALS(isdigit(INT_MIN - 1), ft_isdigit(INT_MIN - 1));
-
-	// Case 9
 	puts("\x1b[33mINT_MAX + 1\x1b[0m");
 	TEST_ASSERT_EQUALS(isdigit(INT_MAX + 1), ft_isdigit(INT_MAX + 1));
 	*/

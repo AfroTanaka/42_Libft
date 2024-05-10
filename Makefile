@@ -1,10 +1,12 @@
 NAME = libft.a
 SRCS = ft_isalpha.c\
 	   ft_isdigit.c\
-	   ft_isalnum.c
+	   ft_isalnum.c\
+	   ft_isascii.c
 OBJS = ft_isalpha.o\
 	   ft_isdigit.o\
-	   ft_isalnum.o
+	   ft_isalnum.o\
+	   ft_isascii.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 TEST = TestCode/libft_test.c TestCode/testFt*.c

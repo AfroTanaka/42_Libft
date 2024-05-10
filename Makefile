@@ -11,7 +11,7 @@ re: fclean all
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rcs $(NAME) $(OBJS)
+	ar -rc $(NAME) $(OBJS)
 
 $(OBJS):
 	$(CC) $(CFLAGS) -c $(SRCS)
@@ -22,8 +22,11 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-exec: fclean $(NAME)
+exec: re
 	$(CC) $(CFLAGS) $(TEST) $(TESTRUN) $(NAME) -o exec
+	./exec
+	@echo "\033[31mTest Done\033[m"
+	rm -f exec
 
 .PHONY:
 	re all fclean clean

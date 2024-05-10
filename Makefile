@@ -4,6 +4,7 @@ OBJS = ft_isalpha.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 TEST = libft_test.c
+TESTRUN = testRunner.c
 
 re: fclean all
 
@@ -22,7 +23,7 @@ fclean: clean
 	rm -f $(NAME)
 
 exec: fclean $(NAME)
-	$(CC) $(CFLAGS) $(TEST) $(NAME) -o exec
+	$(CC) $(CFLAGS) $(TEST) $(TESTRUN) $(NAME) -o exec
 
 .PHONY:
 	re all fclean clean

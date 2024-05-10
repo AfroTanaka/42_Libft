@@ -1,9 +1,13 @@
 NAME = libft.a
-SRCS = ft_isalpha.c
-OBJS = ft_isalpha.o
+SRCS = ft_isalpha.c\
+	   ft_isdigit.c\
+	   ft_isalnum.c
+OBJS = ft_isalpha.o\
+	   ft_isdigit.o\
+	   ft_isalnum.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-TEST = TestCode/libft_test.c TestCode/testFtIsalpha.c
+TEST = TestCode/libft_test.c TestCode/testFt*.c
 TESTRUN = TestRunner/testRunner.c
 
 re: fclean all

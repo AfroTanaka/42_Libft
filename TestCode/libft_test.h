@@ -11,4 +11,9 @@
 // Test ft_isalpha()
 unsigned int TestIsalpha(void);
 
+// Test ft_isdigit()
+unsigned int TestIsdigit(void);
+
+// Test ft_isalnum()
+unsigned int TestIsalnum(void);
 #endif

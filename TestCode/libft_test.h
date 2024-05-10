@@ -19,4 +19,7 @@ unsigned int TestIsalnum(void);
 
 // Test ft_isascii()
 unsigned int TestIsascii(void);
+
+// Test ft_isprint()
+unsigned int TestIsprint(void);
 #endif

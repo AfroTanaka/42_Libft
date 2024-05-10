@@ -10,8 +10,6 @@ CFLAGS = -Wall -Wextra -Werror
 TEST = TestCode/libft_test.c TestCode/testFt*.c
 TESTRUN = TestRunner/testRunner.c
 
-re: fclean all
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -19,6 +17,8 @@ $(NAME): $(OBJS)
 
 $(OBJS):
 	$(CC) $(CFLAGS) -c $(SRCS)
+
+re: fclean all
 
 clean:
 	rm -f $(OBJS)
@@ -29,7 +29,7 @@ fclean: clean
 exec: re
 	$(CC) $(CFLAGS) $(TEST) $(TESTRUN) $(NAME) -o exec
 	./exec
-	@echo "\033[31mTest Done\033[m"
+	@echo "\033[35mTest Done\033[m"
 	rm -f exec
 
 .PHONY:

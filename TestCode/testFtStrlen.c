@@ -4,7 +4,10 @@ unsigned int TestStrlen(void)
 {
 	// Case 1
 	puts("\x1b[33mNULL\x1b[0m");
-	TEST_ASSERT_EQUALS(strlen(NULL), ft_strlen(NULL));
+	puts("Segmentation Fault");
+	//printf("%zu\n", strlen(NULL));
+	//printf("%zu\n", ft_strlen(NULL));
+	//TEST_ASSERT_EQUALS(strlen(NULL), ft_strlen(NULL));
 
 	// Case 2
 	puts("\x1b[33mThere is a null character in the middle of string\x1b[0m");
@@ -41,10 +44,14 @@ unsigned int TestStrlen(void)
 	// Case 9
 	//char u[0] = {'\0'};
 	puts("\x1b[33mThe size index is SIZE_T_MIN(u long) which is zero in this environment.\x1b[0m");
+	puts("Excess elements in array initializer");
 	//TEST_ASSERT_EQUALS(strlen(u), ft_strlen(u));
 
 	// Case 10
 	//char v[0 - 1] = {'\0'};
 	puts("\x1b[33mThe size index is SIZE_T_MIN(u long) - 1 which is zero in this environment.\x1b[0m");
+	puts("Index is negative");
 	//TEST_ASSERT_EQUALS(strlen(v), ft_strlen(v));
+	
+	return 0;
 }

@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <limits.h>
 #include <ctype.h>
+#include <string.h>
+
 // Test ft_isalpha()
 unsigned int TestIsalpha(void);
 
@@ -22,4 +24,7 @@ unsigned int TestIsascii(void);
 
 // Test ft_isprint()
 unsigned int TestIsprint(void);
+
+// Test ft_strlen()
+unsigned int TestStrlen(void);
 #endif

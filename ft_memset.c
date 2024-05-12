@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:33:55 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/17 10:53:54 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/13 08:55:29 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*memset(void *b, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		temp[i] = c;
+		temp[i] = (unsigned char) c;
 		i++;
 	}
 	return (b);

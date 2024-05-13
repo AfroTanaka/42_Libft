@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:56:11 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/23 13:05:41 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/13 11:42:35 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_memcmp(const void *buf1, const void *buf2, size_t n)
  */
 {
 	size_t	i;
-	char	*temp_buf1;
-	char	*temp_buf2;
+	const char	*temp_buf1;
+	const char	*temp_buf2;
 
 	i = 0;
 	temp_buf1 = buf1;

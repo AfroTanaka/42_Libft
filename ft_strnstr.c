@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:20:42 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/23 13:58:57 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/13 11:43:39 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ char	*ft_strnstr(const char *target, const char *find, size_t len)
 			index++;
 		}
 		if (*temp_find == '\0')
-			return (temp_find - index);
+			return ((char*)temp_find - index);
 		target++;
 	}
+	return (NULL);
 }

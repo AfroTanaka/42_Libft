@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:37:59 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/17 11:10:41 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/13 11:25:21 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	ft_bzero(void *s, size_t n)
 	char	*temp;
 
 	temp = s;
+	if (!n)
+		return;
 	while (n--)
 	{
 		*temp = '\0';

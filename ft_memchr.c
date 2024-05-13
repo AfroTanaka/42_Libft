@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:48:16 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/23 12:54:54 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/13 11:42:05 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	*ft_memchr(const void *buf, int ch, size_t n)
  * arg2 - The integer value that you want to find in buf.
  */
 {
-	char	*temp;
+	const char	*temp;
 
 	temp = buf;
 	while (n--)
 		if (*temp == ch)
-			return (temp);
+			return ((void*)temp);
 	return (NULL);
 }

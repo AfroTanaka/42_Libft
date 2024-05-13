@@ -6,11 +6,10 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 12:04:50 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/16 16:37:15 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/11 09:31:19 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
 #include <stdio.h>
 
 size_t	ft_strlen(const char *s)

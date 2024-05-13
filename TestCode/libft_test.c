@@ -42,4 +42,9 @@ int main()
 	puts("\x1b[31mft_memset\x1b[0m");
 	if (!((int) testRunner(TestMemset)))
 		puts("\x1b[36mSuccess\x1b[0m\n");
+
+	// ft_bzero Test
+	puts("\x1b[31mft_bzero\x1b[0m");
+	if (!((int) testRunner(TestBzero)))
+		puts("\x1b[36mSuccess\x1b[0m\n");
 }

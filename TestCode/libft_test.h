@@ -30,4 +30,7 @@ unsigned int TestStrlen(void);
 
 // Test ft_memset()
 unsigned int TestMemset(void);
+
+// Test ft_bzero()
+unsigned int TestBzero(void);
 #endif

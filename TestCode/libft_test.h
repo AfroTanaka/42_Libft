@@ -27,4 +27,7 @@ unsigned int TestIsprint(void);
 
 // Test ft_strlen()
 unsigned int TestStrlen(void);
+
+// Test ft_memset()
+unsigned int TestMemset(void);
 #endif

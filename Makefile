@@ -4,13 +4,15 @@ SRCS = ft_isalpha.c\
 	   ft_isalnum.c\
 	   ft_isascii.c\
 	   ft_isprint.c\
-	   ft_strlen.c
+	   ft_strlen.c\
+	   ft_memset.c
 OBJS = ft_isalpha.o\
 	   ft_isdigit.o\
 	   ft_isalnum.o\
 	   ft_isascii.o\
 	   ft_isprint.o\
-	   ft_strlen.o
+	   ft_strlen.o\
+	   ft_memset.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 TEST = TestCode/libft_test.c TestCode/testFt*.c

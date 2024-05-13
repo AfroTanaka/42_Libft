@@ -6,14 +6,14 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:12:16 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/23 13:18:35 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/13 12:01:05 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strcmp(const char *s1, const char *s2, size_t n)
-/* ft_strcmp - The function compares not more than n characters. Because this function is designed for comparing strings
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+/* ft_strncmp - The function compares not more than n characters. Because this function is designed for comparing strings
  *             rather than binary data, characters that appear after a '\0' character are not compared.
  * ret value - Return an integer greater than, equal to, or less than 0, according as the string s1 is greater than, equal to, or less than
  *             the string s2. The comparison is done using unsigned characters, so that '\200' is greater than '\0'.

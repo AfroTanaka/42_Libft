@@ -6,13 +6,13 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 11:53:03 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/19 12:12:41 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/13 16:22:18 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t	ft_strlen(const char *s);
+static size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 /* ft_strlcat - The function appends src to the end of dst.
@@ -27,22 +27,30 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	end;
 	size_t	i;
 
-	end = dstsize - ft_strlen(dst) - 1;
-	i = ft_strlen(dst);
-	if (dstsize == 0 || (dstsize - ft_strlen(dst) - 1) < ft_strlen(src))
-		return (dstsize + ft_strlen(src));
-	while (i <= end)
+	end = dstsize - 1;
+	
+	if (!src || dstsize == 0 )
 	{
-		*dst = *src;
-		dst++;
+		if (ft_strlen(dst) > dstsize)
+		{
+			return (dstsize + ft_strlen(src));
+		}else
+		{
+			return (ft_strlen(dst) + ft_strlen(src));
+		}
+	}
+	i = ft_strlen(dst);
+	while (i < end && *src)
+	{
+		dst[i] = *src;
 		src++;
 		i++;
 	}
-	*dst = '\0';
-	return (dstsize + ft_strlen(src));
+	dst[i] = '\0';
+	return (ft_strlen(dst) + ft_strlen(src));
 }
 
-size_t	ft_strlen(const char *s)
+static size_t	ft_strlen(const char *s)
 /* ft_strlen - The function measures how many length the given value has
  * ret value - Return a size_t value which is a length of argument
  * arg - A character pointer

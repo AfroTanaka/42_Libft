@@ -61,7 +61,7 @@ fclean: clean
 	rm -f $(NAME)
 
 exec: re
-	$(CC) $(CFLAGS) $(TEST) $(TESTRUN) $(NAME) -o exec
+	$(CC) $(TEST) $(TESTRUN) $(NAME) -o exec
 	./exec
 	@echo "\033[35mTest Done\033[m"
 	rm -f exec

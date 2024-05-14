@@ -33,4 +33,7 @@ unsigned int TestMemset(void);
 
 // Test ft_bzero()
 unsigned int TestBzero(void);
+
+// Test ft_strlcat()
+unsigned int TestStrlcat(void);
 #endif

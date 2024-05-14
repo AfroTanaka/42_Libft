@@ -47,24 +47,24 @@ TESTRUN = TestRunner/testRunner.c
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
+	@ar -rc $(NAME) $(OBJS)
 
 $(OBJS):
-	$(CC) $(CFLAGS) -c $(SRCS)
+	@$(CC) $(CFLAGS) -c $(SRCS)
 
 re: fclean all
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 exec: re
-	$(CC) $(TEST) $(TESTRUN) $(NAME) -o exec
-	./exec
+	@$(CC) $(TEST) $(TESTRUN) $(NAME) -o exec
+	@./exec
 	@echo "\033[35mTest Done\033[m"
-	rm -f exec
+	@rm -f exec
 
 .PHONY:
 	re all fclean clean

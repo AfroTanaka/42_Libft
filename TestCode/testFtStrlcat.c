@@ -3,16 +3,37 @@
 unsigned int TestStrlcat(void)
 {
 	// Case 1
-	char dest[11] = "Hello";
-	char dest_ft[11] = "Hello";
+	/*puts("\x1b[31mStandard Case: (20 - \"Hello\", World, sizeof(arg1) - 20\x1b[0m");
+	char s[20] = "Hello";
+	char t[] = "World";
+	size_t ret = strlcat(s, t, sizeof(s));
+	printf("ret: %zu\n", ret);
+	printf("Contents: %s\nContents Size: %lu\n", s, sizeof(s));*/
 
-	printf("Before\ndest: %s\ndest_ft: %s\n", dest, dest_ft);
-	puts("\x1b[31mExecute strlcat...\x1b[0m");
-	size_t ret_dest = strlcat(NULL, "lol", 2);
-	puts("\x1b[31mExecute ft_strlcat...\x1b[0m");
-	size_t ret_dest_ft = ft_strlcat(dest, "lorem", 1);
-	printf("After\ndest: %s\ndest_ft: %s\n", dest, dest_ft);
-	printf("ret_dest: %lu\nret_dest_ft: %lu\n", ret_dest, ret_dest_ft);
+	// Case 2
+	/*puts("\x1b[31mStandard Case: (6 - \"Hello\", World, sizeof(arg1) - 6\x1b[0m");
+	char s[6] = "Hello";
+	char t[] = "World";
+	size_t ret = strlcat(s, t, sizeof(s));
+	printf("ret: %zu\n", ret);
+	printf("Contents: %s\nContents Size: %lu\n", s, sizeof(s));*/
+
+	// Case 3
+	/*puts("\x1b[31mStandard Case: (10 - \"Hello\", World, sizeof(arg1) - 10\x1b[0m");
+	char s[10] = "Hello";
+	char t[] = "World";
+	size_t ret = strlcat(s, t, sizeof(s));
+	printf("ret: %zu\n", ret);
+	printf("Contents: %s\nContents Size: %lu\n", s, sizeof(s));*/
+
+	// Case 4
+	puts("\x1b[31mStandard Case: (10 - \"Hello\", abcdefghijklmn, 20\x1b[0m");
+	char s[10] = "Hello";
+	char t[] = "abcdefghijklmn";
+	size_t ret = strlcat(s, NULL, sizeof(s));
+	printf("ret: %zu\n", ret);
+	printf("Contents: %s\nContents Size: %lu\n", s, sizeof(s));
+
 
 	return 0;
 }

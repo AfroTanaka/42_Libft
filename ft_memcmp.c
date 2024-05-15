@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:56:11 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/13 11:42:35 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/15 12:43:42 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ int	ft_memcmp(const void *buf1, const void *buf2, size_t n)
  * arg2 - A constant void pointer that compares with arg1
  */
 {
-	size_t	i;
-	const char	*temp_buf1;
-	const char	*temp_buf2;
+	const unsigned char	*temp_buf1;
+	const unsigned char	*temp_buf2;
+	size_t				i;
 
 	i = 0;
 	temp_buf1 = buf1;
 	temp_buf2 = buf2;
 	while (i < n)
 	{
-		if ((unsigned char)temp_buf1[i] - (unsigned char)temp_buf2[i] != 0)
+		if (temp_buf1[i] - temp_buf2[i] != 0)
 			return (temp_buf1[i] - temp_buf2[i]);
 		i++;
 	}

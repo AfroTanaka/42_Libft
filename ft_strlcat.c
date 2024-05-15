@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 11:53:03 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/14 16:34:40 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/15 09:48:31 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	end;
-	size_t		src_len;
-	size_t		dst_len;
+	size_t			src_len;
+	size_t			dst_len;
 
-	dst_len = ft_strlen(dst);
-	if (!src)
-		return (dst_len);
 	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
 	i = 0;
 	end = dstsize - dst_len - 1;
 	if (!dstsize)
-		return  (ft_strlen(src));
+		return (ft_strlen(src));
 	if (ft_strlen(dst) >= dstsize)
 		return (dstsize + src_len);
 	while (i < end && src[i])

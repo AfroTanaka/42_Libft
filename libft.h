@@ -1,17 +1,29 @@
-#ifndef LIBFT_H
-#define LIBFT_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/15 09:49:50 by mmiura            #+#    #+#             */
+/*   Updated: 2024/05/15 09:51:36 by mmiura           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stdio.h>
 // ft_isalnum.c
-int	ft_isalnum(int c);
+int		ft_isalnum(int c);
 // ft_isalpha.c
-int	ft_isalpha(int c);
+int		ft_isalpha(int c);
 // ft_isascii.c
-int	ft_isascii(int c);
+int		ft_isascii(int c);
 // ft_isdigit.c
-int	ft_isdigit(int c);
+int		ft_isdigit(int c);
 // ft_isprint.c
-int	ft_isprint(int c);
+int		ft_isprint(int c);
 // ft_strlen.c
 size_t	ft_strlen(const char *s);
 // ft_memset.c

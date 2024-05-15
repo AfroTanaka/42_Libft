@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:20:42 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/13 11:43:39 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/15 15:15:01 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,24 @@ char	*ft_strnstr(const char *target, const char *find, size_t len)
 {
 	const char	*temp_target;
 	const char	*temp_find;
-	size_t		index;
+	size_t		counter;
 
-	while ((!(*target)) && len--)
+	if (!(*find))
+		return ((char *)target);
+	while (*target && len--)
 	{
 		temp_target = target;
 		temp_find = find;
-		index = 0;
-		while (!(*temp_find))
+		counter = 0;
+		while (*temp_find && counter <= len && (*temp_target == *temp_find))
 		{
+			//printf("%",*temp_find , counter <= len , (*temp_target == *temp_find));
 			temp_target++;
 			temp_find++;
-			index++;
+			counter++;
 		}
-		if (*temp_find == '\0')
-			return ((char*)temp_find - index);
+		if (!(*temp_find))
+			return ((char *)target);
 		target++;
 	}
 	return (NULL);

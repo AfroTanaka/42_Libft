@@ -63,7 +63,7 @@ fclean: clean
 
 exec: re
 	#$(CC) $(TEST) $(TESTRUN) $(NAME) -o exec
-	@$(CC) $(CFLAGS) $(MAIN) $(SRCS) $(NAME) -o exec
+	@$(CC) $(CFLAGS) -g $(MAIN) $(SRCS) $(NAME) -o exec
 	@./exec
 	@echo "\033[35mTest Done\033[m"
 

@@ -6,13 +6,12 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:01:06 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/23 14:10:52 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/16 10:21:51 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-static size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 /* ft_strrchr - The function locates the last occurrence of c in the dstring pointed to by s.
@@ -32,18 +31,4 @@ char	*ft_strrchr(const char *s, int c)
 		if (s[s_length] == c)
 			return ((char *)s + s_length);
 	return (NULL);
-}
-
-static size_t	ft_strlen(const char *s)
-/* ft_strlen - The function computes the length of the string s.
- * ret value - Return the number of characters that precede the terminating NULL character.
- * arg - A constant character pointer that you want to compute
- */
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }

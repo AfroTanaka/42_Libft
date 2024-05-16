@@ -6,13 +6,12 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 11:53:03 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/15 09:48:31 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/16 10:18:44 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-static size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 /**
@@ -45,18 +44,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
-}
-
-static size_t	ft_strlen(const char *s)
-/* ft_strlen - The function measures how many length the given value has
- * ret value - Return a size_t value which is a length of argument
- * arg - A character pointer
- */
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }

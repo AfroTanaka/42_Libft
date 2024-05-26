@@ -18,7 +18,10 @@ SRCS = ft_isalpha.c\
 	   ft_strncmp.c\
 	   ft_memchr.c\
 	   ft_memcmp.c\
-	   ft_strnstr.c
+	   ft_strnstr.c\
+	   ft_atoi.c\
+	   ft_calloc.c\
+	   ft_strdup.c
 OBJS = ft_isalpha.o\
 	   ft_isdigit.o\
 	   ft_isalnum.o\
@@ -38,12 +41,15 @@ OBJS = ft_isalpha.o\
 	   ft_strncmp.o\
 	   ft_memchr.o\
 	   ft_memcmp.o\
-	   ft_strnstr.o
+	   ft_strnstr.o\
+	   ft_atoi.o\
+	   ft_calloc.o\
+	   ft_strdup.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main.c
+MAIN = main_strchr.c
 
 all: $(NAME)
 
@@ -63,7 +69,7 @@ fclean: clean
 
 exec: re
 	#$(CC) $(TEST) $(TESTRUN) $(NAME) -o exec
-	@$(CC) $(CFLAGS) -g $(MAIN) $(SRCS) $(NAME) -o exec
+	@$(CC) $(CFLAGS) -g -O0 $(MAIN) $(SRCS) $(NAME) -o exec
 	@./exec
 	@echo "\033[35mTest Done\033[m"
 

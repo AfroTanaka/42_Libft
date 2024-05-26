@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:06:56 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/23 13:10:31 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/17 11:46:14 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == 0 && *s == c)
+	if (*s == (char)c)
 		return ((char *)s);
 	return (NULL);
 }

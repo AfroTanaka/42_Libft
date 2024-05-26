@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:01:06 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/16 10:21:51 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/17 09:57:55 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ char	*ft_strrchr(const char *s, int c)
  * arg2 - An integer value that is an element for searching in arg1
  */
 {
-	size_t	s_length;
+	unsigned int	s_length;
 
-	s_length = ft_strlen(s);
-	if (c == 0 && s[s_length] == '\0')
-		return ((char *)s + s_length);
+	if (!*s && c == 0)
+		return ((char *)s);
+	s_length = ft_strlen(s) + 1;
 	while (s_length--)
-		if (s[s_length] == c)
+		if (s[s_length] == (char)c)
 			return ((char *)s + s_length);
 	return (NULL);
 }

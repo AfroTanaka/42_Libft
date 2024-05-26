@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:33:55 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/16 10:09:44 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/26 09:12:37 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memset(void *b, int c, size_t len)
  * arg3 - A size_t value which's defined in stdio.h
  */
 {
-	size_t	i;
-	char	*temp;
+	size_t			i;
+	unsigned char	*temp;
 
 	temp = b;
 	i = 0;

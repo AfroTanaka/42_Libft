@@ -6,14 +6,14 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 09:49:50 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/15 09:51:36 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/26 10:48:18 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
 # include <stdio.h>
+
 // ft_isalnum.c
 int		ft_isalnum(int c);
 // ft_isalpha.c
@@ -56,4 +56,8 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 // ft_atoi
 int		ft_atoi(const char *str);
+// ft_calloc
+void	*ft_calloc(size_t count, size_t size);
+// ft_strdup
+char	*ft_strdup(const char *s1);
 #endif

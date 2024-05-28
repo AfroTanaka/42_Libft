@@ -49,7 +49,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_strlcat_mine.c
+MAIN = main_calloc.c
 
 all: $(NAME)
 
@@ -69,7 +69,8 @@ fclean: clean
 
 exec: re
 	@#$(CC) $(TEST) $(TESTRUN) $(NAME) -o exec
-	@$(CC) $(CFLAGS) -g -O0 $(MAIN) $(SRCS) $(NAME) -o exec
+	@#$(CC) $(CFLAGS) -g -O0 $(MAIN) $(SRCS) $(NAME) -o exec
+	@$(CC) $(CFLAGS) -g $(MAIN) $(SRCS) $(NAME) -o exec
 	@./exec
 	@echo "\033[35mTest Done\033[m"
 

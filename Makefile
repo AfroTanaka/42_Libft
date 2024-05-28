@@ -21,7 +21,8 @@ SRCS = ft_isalpha.c\
 	   ft_strnstr.c\
 	   ft_atoi.c\
 	   ft_calloc.c\
-	   ft_strdup.c
+	   ft_strdup.c\
+	   ft_substr.c
 OBJS = ft_isalpha.o\
 	   ft_isdigit.o\
 	   ft_isalnum.o\
@@ -44,7 +45,8 @@ OBJS = ft_isalpha.o\
 	   ft_strnstr.o\
 	   ft_atoi.o\
 	   ft_calloc.o\
-	   ft_strdup.o
+	   ft_strdup.o\
+	   ft_substr.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #TEST = TestCode/libft_test.c TestCode/testFt*.c

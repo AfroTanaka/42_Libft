@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 10:09:33 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/28 13:24:27 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/28 13:28:23 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ret;
 
-	if (!count || !size)
-	{
-		count = 1;
-		size = 1;
-	}
 	ret = malloc(count * size);
 	if (!ret)
 		return (NULL);

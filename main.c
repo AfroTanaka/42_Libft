@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
+#include <stdint.h>
 
 /*int funcB(int i)
 {
@@ -25,5 +26,7 @@ int main()
 }*/
 int main()
 {
-	printf("%lu\n", ULONG_MAX + 1);
+	//printf("%lu\n", ULONG_MAX + 1);
+//	printf("%d\n", 1/ 0);
+	printf("%zu\n", SIZE_MAX);
 }

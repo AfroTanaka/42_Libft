@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 /*int funcB(int i)
 {
@@ -28,5 +29,8 @@ int main()
 {
 	//printf("%lu\n", ULONG_MAX + 1);
 //	printf("%d\n", 1/ 0);
-	printf("%zu\n", SIZE_MAX);
+	//printf("%zu\n", SIZE_MAX);
+	char *s = "";
+	printf("s_add: %p\n", s);
+	free(s);
 }

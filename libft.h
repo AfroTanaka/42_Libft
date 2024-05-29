@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 09:49:50 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/28 14:13:22 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/29 11:46:27 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,5 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 // ft_substr
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 #endif

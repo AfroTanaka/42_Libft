@@ -10,9 +10,9 @@ int    main(void)
     char    *p;
 
     printf("Getting memory...\n");
-    //p = ft_calloc((size_t)ULONG_MAX / 10 + (size_t)50, 10);
+    p = ft_calloc((size_t)ULONG_MAX / 10 + (size_t)50, 10);
 	//printf("%ld\n", (size_t)ULONG_MAX / 10 + (size_t)50 * 10);
-    p = calloc((size_t)ULONG_MAX / 10 + (size_t)50, 10);
+    //p = calloc((size_t)ULONG_MAX / 10 + (size_t)50, 10);
 
     //p = ft_calloc(0, 0);
     //p = (char *)calloc(0, 0);

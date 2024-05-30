@@ -30,7 +30,8 @@ int main()
 	//printf("%lu\n", ULONG_MAX + 1);
 //	printf("%d\n", 1/ 0);
 	//printf("%zu\n", SIZE_MAX);
-	char *s = "";
+	/*char *s = "";
 	printf("s_add: %p\n", s);
-	free(s);
+	free(s);*/
+	printf("%ld\n", __STDC_VERSION__);
 }

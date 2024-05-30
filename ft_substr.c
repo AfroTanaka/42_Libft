@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:13:45 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 11:59:36 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/30 13:27:16 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 /**
- * @fn
- * Allocates (with malloc(3)) and returns a substring from the string 's'.
- * The substring begins at index 'start' and is of maximum size 'len'.
- * @brief Get substring which extracts from s[start] to strlen(s) == '\0' within len characters.
+ * @brief Allocates (with malloc(3)) and returns a substring from the string 's'. The substring begins at index 'start' and is of maximum size 'len'.
  * @param (s) The string from which to create the substring.
  * @param (start) The start index of the substring in the string 's'.
  * @param (len) The maximum length of the substring.
- * @return The substring. NULL if the allocation fails.
+ * @return (char*) The substring. NULL if the allocation fails.
  */
 {
 	char	*ret;

@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:37:59 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/16 10:09:41 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/30 13:47:45 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
-/* ft_bzero - The function assigns zero with n bytes to arg1
- * ret value - Return nothing
- * arg1 - Void pointer
- * arg2 - A size_t value, size_t is defined in stdio.h
+/**
+ * @brief Writes n zeroed bytes to the string s. If n is zero, it does nothing.
+ * @param (s) The string that will fill with 0 with n bytes.
+ * @param (n) How many bytes will fill with 0.
+ * @return (void) return nothing.
  */
 {
 	s = ft_memset(s, 0, n);

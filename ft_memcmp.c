@@ -6,19 +6,20 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:56:11 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/15 12:43:42 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/30 14:29:05 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
 int	ft_memcmp(const void *buf1, const void *buf2, size_t n)
-/* ft_memcmp - The function compares byte string buf1 against byte string buf2. Both strings are assumed to be n bytes long.
- * ret value - Return zero if the two strings are identical, otherwise returns the difference between the first two differing bytes
- *             Zero-length strings are always identical. This behavior is not required by C and portable code should only depend on
- *             the sign of the returned value.
- * arg1 - A constant void pointer that compares with arg2
- * arg2 - A constant void pointer that compares with arg1
+/**
+ * @brief Compares byte string buf1 against byte string bu2. Both strings are assumed to be n bytes long.
+ * @param (buf1) The byte string's compared against byte string buf2.
+ * @param (buf2) The byte string that compares to buf1.
+ * @param (n) how many bytes to compare.
+ * @return (int) Zero if the two strings are identical, otherwise the difference between the first two differing bytes (treated as unsigned char values.).
+ * @detail Zero-length strings are always identical. The behaviour is not required by C and portable code should only depend on the sign of the returned value.
  */
 {
 	const unsigned char	*temp_buf1;

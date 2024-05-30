@@ -6,14 +6,15 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 11:27:31 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/29 13:53:01 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/30 14:06:44 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
-/* ft_isascii - The function checks if it's in ascii table
- * arg - An integer value as an argument
- * ret value - Return 0 or 1
+/**
+ * @brief Tests for an ASCII character, which is any character between 0 and decimal 127 inclusive.
+ * @param (c) An integer character
+ * @return (int) Non-zero if it's an ASCII character. Zero otherwise.
  */
 {
 	return (0 <= c && c <= 127);

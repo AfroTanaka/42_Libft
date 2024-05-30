@@ -6,19 +6,20 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:32:30 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/17 11:05:59 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/30 14:35:37 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
-/* ft_memmove - The function copies the value of src to dst
- * 				Even if src overlapped dst, it should always be done.
- * ret value - Return void pointer
- * arg1 - A void pointer
- * arg2 - A void pointer
- * arg3 - A size_t value, size_t is defined in stdio.h
+/**
+ * @brief Copies len bytes from string src to string dst.
+ * @param (dst) The string that copies src to.
+ * @param (src) The string that copies from.
+ * @param (len) How many bytes to copy.
+ * @return (void*) The origianl value of dst.
+ * @detail The two strings may overlap; the copy is always done in a non-destructive manner.
  */
 {
 	char			*temp_dst;

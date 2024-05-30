@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 08:38:01 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/26 08:44:25 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/30 13:44:28 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@ static unsigned long	ft_proceed_if_space(const char *s);
 static signed char		ft_set_sign_flag(const char *s, unsigned long *i);
 
 int	ft_atoi(const char *nptr)
+/**
+ * @brief Converts the initial portion of the string pointed to by str to int representation.
+ * @param (nptr) The string that would be converted to int.
+ * @return (int) Some integers which converted from @param.
+ */
 {
 	long			ret;
 	unsigned long	index;
@@ -31,6 +36,11 @@ int	ft_atoi(const char *nptr)
 }
 
 static unsigned long	ft_proceed_if_space(const char *s)
+/**
+ * @brief Proceed if s[current] is isspace().
+ * @param (s) The string that would be proceeded along with isspace().
+ * @return (static unsigned long) Index after proceeded at !isspace().
+ */
 {
 	unsigned long	i;
 
@@ -42,6 +52,12 @@ static unsigned long	ft_proceed_if_space(const char *s)
 }
 
 static signed char	ft_set_sign_flag(const char *s, unsigned long *i)
+/**
+ * @brief Set sign flag -1 if it's minus, 1 otherwise.
+ * @param (s) The string that might include a sign flag.
+ * @param (i) The unsigned long integer that represents the current index.
+ * @return (static signed char) -1 if it's minus, 1 otherwise.
+ */
 {
 	signed char	flag;
 

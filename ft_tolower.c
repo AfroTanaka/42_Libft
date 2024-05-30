@@ -6,14 +6,15 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:11:55 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/29 13:56:44 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/30 15:35:34 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
-/* ft_tolower - The function converts an upper-case letter to the corresponding lower-case letter.
- * ret value - Return the corresponding lower-case letter if the argument is an upper-case letter, return unchanged otherwise.
- * arg - Must be representable as an unsigned char or the value of EOF.
+/**
+ * @brief Converts an upper-case letter to the corresponding lower-case letter.
+ * @param (c) This argument must be representable as an unsigned char or the value of EOF.
+ * @return (int) Corresponding lower-case letter if it's an upper-case letter. Otherwise, the argument is returned unchanged.
  */
 {
 	if (65 <= c && c <= 90)

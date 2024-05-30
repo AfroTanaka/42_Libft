@@ -6,20 +6,21 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:34:34 by mmiura            #+#    #+#             */
-/*   Updated: 2024/04/19 11:28:11 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/30 15:08:27 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-static size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-/* ft_strlcpy - The function copies dstsize - 1 size from src to dst
- * ret value - Return the length of src
- * arg1 - A character pointer for destination
- * arg2 - A character pointer for source
- * arg3 - A size_t value for the size that you want to copy, size_t is defined in stdio.h
+/**
+ * @brief Copies up to dstsize - 1 characters from the string src to dst, NUL-terminating the result if dstsize is not 0.
+ * @param (dst) The string that src copies to.
+ * @param (src) The string that copies from
+ * @param (dstsize) Should take the full size of the destination buffer and gurantee NUL-termination if there is room.
+ * @return (size_t) The length of src.
+ * @detail Room for the NUL should be included in dstsize.
  */
 {
 	const char	*temp_src;
@@ -36,18 +37,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	*dst = '\0';
 	return (ft_strlen(src));
-}
-
-static size_t	ft_strlen(const char *s)
-/* ft_strlen - The function measures how many length the given value has
- * ret value - Return a size_t value which is a length of argument
- * arg - A character pointer
- */
-{
-	size_t	ret;
-
-	ret = 0;
-	while (s[ret])
-		ret++;
-	return (ret);
 }

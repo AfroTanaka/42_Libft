@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 09:49:50 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 12:30:38 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/31 11:10:25 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 // ft_strjoin
 char	*ft_strjoin(char const *s1, char const *s2);
+// ft_strtrim
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif

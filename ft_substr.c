@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:13:45 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/31 14:02:00 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/31 14:35:56 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ret;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	if (!len || start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if (ft_strlen(&s[start]) < len)

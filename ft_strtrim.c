@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:19:44 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/31 14:21:03 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/31 14:35:00 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@ static size_t	ft_rtrim(char const *s1, char const *set);
 static size_t	ft_ltrim(char const *s1, char const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
+/**
+ * @brief Allocates (with malloc(3)) and returns a copy of 's1' with the characters specified in 'set' removed from the beginning and the end of the string.
+ * @param (s1) The string to be trimmed.
+ * @param (set) The reference set of characters to trim.
+ * @return (char*) The trimmed string. NULL if the allocation fails.
+ * @detail NULL pointer if either s1 or set is NULL pointer.
+ */
 {
 	size_t	start;
 	size_t	end;
@@ -34,6 +41,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 static size_t	ft_rtrim(char const *s1, char const *set)
+/**
+ * @brief Proceed index until the character does not appear in set.
+ * @param (s1) The string to be trimmed.
+ * @param (set) The reference set of characters to trim.
+ * @return (size_t) The index that is the index of string which's already trimmed.
+ * @detail the direction to proceed from right.
+ */
 {
 	long	s1_indx;
 	size_t	set_len;
@@ -58,6 +72,13 @@ static size_t	ft_rtrim(char const *s1, char const *set)
 }
 
 static size_t	ft_ltrim(char const *s1, char const *set)
+/**
+ * @brief Proceed index until the character does not appear in set.
+ * @param (s1) The string to be trimmed.
+ * @param (set) The reference set of characters to trim.
+ * @return (size_t) The index that is the index of string which's already trimmed.
+ * @detail the direction to proceed from left.
+ */
 {
 	size_t	s1_len;
 	size_t	set_len;

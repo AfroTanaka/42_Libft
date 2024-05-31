@@ -55,7 +55,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_strjoin.c
+MAIN = main_strtrim.c
 
 all: $(NAME)
 

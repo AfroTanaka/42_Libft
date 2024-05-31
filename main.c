@@ -33,5 +33,9 @@ int main()
 	/*char *s = "";
 	printf("s_add: %p\n", s);
 	free(s);*/
-	printf("%ld\n", __STDC_VERSION__);
+	//printf("%ld\n", __STDC_VERSION__);
+	char s[] = "Hello\n";
+	//printf("%c\n", s[5]);
+	s[5] = 'A';
+	printf("%c\n", s[5]);
 }

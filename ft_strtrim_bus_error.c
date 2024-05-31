@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 10:33:59 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/31 11:17:36 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/31 12:43:23 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,30 @@ static size_t	ft_proceed(char *s1, char const *set, const char flag)
 {
 	size_t	index;
 	size_t	cmpt_indx;
-	size_t	set_indx;
+	size_t	set_len;
+	size_t	i;
 
-	index = ft_strlen(s1);
+	index = ft_strlen(s1) - 1;
 	cmpt_indx = index;
 	if (flag == 'r')
 		cmpt_indx = 0;
 	while (s1[index - cmpt_indx])
 	{
-		set_indx = index;
-		while (set[set_indx])
+		set_len = ft_strlen(set);
+		i = 0;
+		while (i < set_len)
 		{
-			if (s1[index - cmpt_indx] == set[set_indx])
+			if (s1[index - cmpt_indx] == set[i])
 				break ;
-			set_indx++;
+			i++;
 		}
-		if (!set[set_indx])
+		if (!set[i] && flag == 'r')
+		{
+			//return (s1[index - cmpt_indx + 1] = '\0', index - cmpt_indx);
+			s1[index - cmpt_indx + 1] = '\0';
+			return (index - cmpt_indx);
+		}
+		else if (!set[i])
 			return (index - cmpt_indx);
 		if (flag == 'r')
 			cmpt_indx++;

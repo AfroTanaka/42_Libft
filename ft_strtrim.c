@@ -6,14 +6,14 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:19:44 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/31 14:01:57 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/31 14:21:03 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_rtrim(char *s1, char const *set);
-static size_t	ft_ltrim(char *s1, char const *set);
+static size_t	ft_rtrim(char const *s1, char const *set);
+static size_t	ft_ltrim(char const *s1, char const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -21,15 +21,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	size;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = ft_ltrim(s1, set);
+	if (!s1[start])
+		return (ft_strdup(""));
 	end = ft_rtrim(s1, set);
 	size = end - start + 1;
 	if (size <= 0)
 		return (ft_strdup(""));
-	return (substr(s1, start, size));
+	return (ft_substr(s1, start, size));
 }
 
-static size_t	ft_rtrim(char *s1, char const *set)
+static size_t	ft_rtrim(char const *s1, char const *set)
 {
 	long	s1_indx;
 	size_t	set_len;
@@ -40,10 +44,10 @@ static size_t	ft_rtrim(char *s1, char const *set)
 	{
 		set_len = ft_strlen(set);
 		i = 0;
-		while (i < set_len);
+		while (i < set_len)
 		{
 			if (s1[s1_indx] == set[i])
-				break;
+				break ;
 			i++;
 		}
 		if (!set[i])
@@ -53,7 +57,7 @@ static size_t	ft_rtrim(char *s1, char const *set)
 	return (s1_indx);
 }
 
-static size_t	ft_ltrim(char *s1, char const *set)
+static size_t	ft_ltrim(char const *s1, char const *set)
 {
 	size_t	s1_len;
 	size_t	set_len;
@@ -69,7 +73,7 @@ static size_t	ft_ltrim(char *s1, char const *set)
 		while (j < set_len)
 		{
 			if (s1[i] == set[j])
-				break;
+				break ;
 			j++;
 		}
 		if (!set[j])

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_strtrim.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/01 10:37:58 by mmiura            #+#    #+#             */
+/*   Updated: 2024/06/01 10:39:19 by mmiura           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include "libft.h"
 
@@ -17,9 +29,10 @@ int main()
 	puts("\x1b[31mMy result...\x1b[0m");
 	printf("%s\n", ft_strtrim(s1, " \n\t"));*/
 
-	char s1[] = "ABC";
-	puts("\x1b[31mExpected...\x1b[0m");
-	puts("");
-	puts("\x1b[31mMy result...\x1b[0m");
-	printf("%s\n", ft_strtrim(s1, "ABC"));
+	//char s1[] = "ABCAA";
+	//char c = 'A';
+	//puts("\x1b[31mExpected...\x1b[0m");
+	//puts("");
+	//puts("\x1b[31mMy result...\x1b[0m");
+	printf("%s\n", ft_strtrim(s1, (char [2]){c, 0}));
 }

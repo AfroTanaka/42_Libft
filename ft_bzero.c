@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:37:59 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 13:47:45 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/31 14:42:43 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_bzero(void *s, size_t n)
  * @return (void) return nothing.
  */
 {
-	s = ft_memset(s, 0, n);
+	(void)ft_memset(s, 0, n);
 }

@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 10:09:33 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 13:52:36 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/05/31 14:43:20 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ret = malloc(count * size);
 	if (!ret)
 		return (NULL);
-	ft_bzero(ret, count * size);
+	ret = ft_memset(ret, 0, count * size);
 	return (ret);
 }

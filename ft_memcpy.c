@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:25:35 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 14:30:54 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/01 10:06:23 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
  * @brief Copies n bytes from memory area src to memory area dst.
  * @param (dst) The memory area that copy src to.
  * @param (src) The memory area that copy from.
+ * @param (n) How many bytes to copy
  * @return (void*) The original value of dst.
  * @detail If dst and src overlap, behaviour is undefined. Applications in which dst and src might overlap should use ft_memmove instead.
  */

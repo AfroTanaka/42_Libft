@@ -1,4 +1,5 @@
 *.o
 *.a
 a.out
-
+a.out.dSYM
+exec.dSYM

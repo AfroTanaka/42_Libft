@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 10:50:58 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 14:06:13 by mmiura           ###   ########.fr       */
+/*   Created: 2024/05/27 09:41:37 by mmiura            #+#    #+#             */
+/*   Updated: 2024/05/27 10:14:20 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
-/**
- * @brief Tests for a decimal digit character.
- * @param (c) This argument must be representable as an unsigned char or the value of EOF.
- * @return (int) Zero if the character tests false. Non-zero if the character tests true.
- */
+#include "libft.h"
+
+size_t ft_strlcat(char* dest, const char* src, size_t size)
 {
-	return (48 <= c && c <= 57);
+    size_t out = 0;
+    size_t cur_src = 0;
+
+    while (dest[out] && out+1 < size)
+	{
+        out++;
+    }
+    if (dest[out])
+		return size;
+    while (src[cur_src] && out+1 < size)
+	{
+        dest[out++] = src[cur_src++];
+    }
+    dest[out] = '\0';
+    return (out);
 }

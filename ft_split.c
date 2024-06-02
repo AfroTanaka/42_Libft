@@ -6,15 +6,16 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 11:46:55 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/02 11:27:56 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/02 12:05:34 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	ft_word_counter(const char *s, const char delim);
-static char		*ft_word_allocater(const char *s, const char delim); // sを内部ではメモリアドレスを進めることで、current_indxを使わずにstartとendを記録するだけにするため。strtrimを使い、その都度形を形成することを忘れずに！
-// doubleポインタの中身の文字列群をfreeする関数を作成すること。
+static char		*ft_word_allocater(const char *s, const char delim);
+static void		ft_word_free(char const **s); // 引数は吟味する必要がある。
+
 char	**ft_split(char const *s, char c)
 {
 	char	*smpld_s;
@@ -30,9 +31,14 @@ char	**ft_split(char const *s, char c)
 	if (!result)
 		return (NULL);
 	i = 0;
+	result[sum_words] = NULL;
 	while (i < sum_words)
-		result[i++] = ft_word_allocater(smpld_s, c);
-	result[i] = NULL;
+	{
+		result[i] = ft_word_allocater(smpld_s, c);
+		if (!result[i])
+			// call free wrapper func.
+		i++;
+	}
 	return (result);
 }
 
@@ -56,4 +62,29 @@ static size_t	ft_word_counter(const char *s, const char delim)
 		start_indx = end_indx + 1;
 	}
 	return (word_count);
+}
+
+static char		*ft_word_allocater(const char *s, const char delim)
+{
+	size_t	start;
+	size_t	end;
+	char	*p_word;
+
+	start = 0;
+	while (s[start])
+	{
+		end = start;
+		while (s[end] != delim && s[end])
+			end++;
+		if (start != end)
+		{
+			p_word = ft_substr(s, start, end - start);
+			if (!p_word)
+				return (NULL);
+			s += end;
+			return (p_word);
+		}
+		start = end + 1;
+	}
+	return (NULL);
 }

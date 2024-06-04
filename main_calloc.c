@@ -5,6 +5,11 @@
 #include <errno.h>
 #include <string.h>
 
+__attribute__((destructor))
+static void destructor() {
+    system("leaks -q exec");
+}
+
 int    main(void)
 {
     char    *p;

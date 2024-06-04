@@ -21,17 +21,18 @@ int main()
 	if (!ret)
 		puts("NULL");
 	size_t i = 0;
+	//size_t size = ft_word_counter("  tripouille  42  ", ' ') + 1;
 	size_t size = ft_word_counter("  tripouille  42  ", ' ') + 1;
-	//size_t size = ft_word_counter("hello!zzzzzzzz", 'z') + 1;
+	printf("size: %zu\n", size);
 	while (i < size)
 	{
 		printf("%s\n", ret[i]);
 		i++;
 	}
-	if (ret[2] == NULL)
+	/*if (ret[2] == NULL)
 		puts("Success");
 	else
-		puts("Failed");
+		puts("Failed");*/
 	free(ret);
 	ret = NULL;
 }

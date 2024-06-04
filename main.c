@@ -44,7 +44,18 @@ int main()
 	s[5] = 'A';
 	printf("%c\n", s[5]);*/
 	//printf("%c", (('A') + 2));
-	char c = 'C';
-	char s[] = {'A', 'B',func(c), 'D', '\0'};
-	printf("%s\n", s);
+	//char c = 'C';
+	//char s[] = {'A', 'B',func(c), 'D', '\0'};
+	//printf("%s\n", s);
+	//printf("%zu\n", SIZE_MAX);
+	printf("%zu\n", (size_t)INT_MIN);
+	//int n = INT_MIN;
+	size_t n = (size_t)INT_MIN;
+	for (int i = 31; i >= 0; i--)
+	{
+		if ((i + 1) % 8 == 0)
+			printf(" ");
+		printf("%zu", (n >> i) & 1);
+	}
+	puts("");
 }

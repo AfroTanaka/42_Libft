@@ -6,12 +6,13 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 11:46:55 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/04 11:59:58 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/04 14:19:27 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 static size_t	ft_word_counter(const char *s, const char delim);
 static char		*ft_word_allocator(const char *s, \
@@ -30,11 +31,13 @@ char	**ft_split(char const *s, char c)
 	if (!smpld_s)
 		return (NULL);
 	sum_words = ft_word_counter(smpld_s, c);
+	//debug
+	printf("%zu\n", sum_words);
 	result = (char **)ft_calloc(sum_words + 1, sizeof(char *));
 	if (!result)
 		return (NULL);
-	i = 0;
 	result[sum_words] = NULL;
+	i = 0;
 	cur = 0;
 	while (i < sum_words)
 	{
@@ -43,10 +46,12 @@ char	**ft_split(char const *s, char c)
 		{
 			ft_words_free(result, i);
 			result = NULL;
+			free(smpld_s);
 			return (result);
 		}
 		i++;
 	}
+	free(smpld_s);
 	return (result);
 }
 

@@ -24,7 +24,8 @@ SRCS = ft_isalpha.c\
 	   ft_strdup.c\
 	   ft_substr.c\
 	   ft_strjoin.c\
-	   ft_strtrim.c
+	   ft_strtrim.c\
+	   ft_split.c
 OBJS = ft_isalpha.o\
 	   ft_isdigit.o\
 	   ft_isalnum.o\
@@ -50,12 +51,14 @@ OBJS = ft_isalpha.o\
 	   ft_strdup.o\
 	   ft_substr.o\
 	   ft_strjoin.o\
-	   ft_strtrim.o
+	   ft_strtrim.o\
+	   ft_split.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+#CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_memmove.c
+MAIN = main_strnstr.c
 
 all: $(NAME)
 

@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
+
+static size_t	ft_word_counter(const char *s, const char delim);
+
+int main()
+{
+	char **ret;
+
+	//ret = ft_split("hello!", ' ');
+	//ret = ft_split("\t\t\t\thello!\t\t\t\t", '\t');
+	//ret = ft_split("xxxxxxxxhello!", 'x');
+	ret = ft_split("hello!zzzzzzzz", 'z');
+	if (!ret)
+		puts("NULL");
+	size_t i = 0;
+	size_t size = ft_word_counter("hello!", ' ');
+	while (i < size)
+	{
+		int j = 0;
+		while (ret[j])
+		{
+			printf("%s\n", ret[j]);
+			j++;
+		}
+		i++;
+	}
+	free(ret);
+	ret = NULL;
+}
+
+static size_t	ft_word_counter(const char *s, const char delim)
+{
+	size_t	start_indx;
+	size_t	end_indx;
+	size_t	word_count;
+
+	word_count = 0;
+	start_indx = 0;
+	while (s[start_indx])
+	{
+		end_indx = start_indx;
+		while (s[end_indx] != delim && s[end_indx])
+			end_indx++;
+		if (start_indx != end_indx)
+			word_count++;
+		if (!s[end_indx])
+			return (word_count);
+		start_indx = end_indx + 1;
+	}
+	return (word_count);
+}

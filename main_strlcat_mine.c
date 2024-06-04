@@ -23,10 +23,12 @@ int main()
 	puts("");*/
 	//printf("original: %zu %s\n", strlcat(s, NULL, 20), s);
 	//printf("mine: %zu %s\n", ft_strlcat(s, NULL, 20), s);
-	printf("will: %zu %s\n", ft_strlcat(s, NULL, 20), s);
+	//printf("will: %zu %s\n", ft_strlcat(s, NULL, 20), s);
 	/*for (unsigned int i = 0; i < size; i++)
 		printf("%d ", s[i]);
 	puts("");*/
-	printf("strlen: %zu\n", strlen(s));
+	//printf("strlen: %zu\n", strlen(s));
+	//printf("original: %zu %s\n", strlcat(s, NULL, 0), s);
+	printf("mine: %zu %s\n", ft_strlcat(s, NULL, 0), s);
 
 }

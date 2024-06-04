@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 10:09:33 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/04 15:12:43 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/04 15:55:28 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ret;
 
-	//debug
-	printf("size: %zu\n", size);
-	printf("count: %zu\n", count);
 	if (count > 0 && size > (SIZE_MAX / count))
 	{
 		errno = 0;

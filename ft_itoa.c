@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 10:54:51 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/17 13:30:28 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/17 13:33:17 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ static unsigned int	ft_make_divisor(unsigned int seed)
 	return (10 * ft_make_divisor(seed - 1));
 }
 
-static char	*ft_value_allocator(char *s, int n, unsigned int size, signed char flag)
+static char	*ft_value_allocator(char *s, int n, \
+		unsigned int size, signed char flag)
 /**
  * @brief
  * @param (n)

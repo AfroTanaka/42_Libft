@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 11:46:55 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/17 11:20:01 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/17 11:27:47 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ char	**ft_split(char const *s, char c)
 	sum_words = ft_word_counter(smpld_s, c);
 	result = (char **)ft_calloc(sum_words + 1, sizeof(char *));
 	if (!result)
-	{
-		free(smpld_s);
-		return (NULL);
-	}
+		return (free(smpld_s), NULL);
 	result[sum_words] = NULL;
 	i = 0;
 	cur = 0;
@@ -43,17 +40,11 @@ char	**ft_split(char const *s, char c)
 	{
 		result[i] = ft_word_allocator(smpld_s, c, &cur);
 		if (!result[i])
-		{
-			/*ft_words_free(result, i);
-			result = NULL;
-			free(smpld_s);
-			return (result);*/
-			return (ft_words_free(result, i), result = NULL, free(smpld_s), result);
-		}
+			return (ft_words_free(result, i), \
+					result = NULL, free(smpld_s), result);
 		i++;
 	}
-	free(smpld_s);
-	return (result);
+	return (free(smpld_s), result);
 }
 
 static size_t	ft_word_counter(const char *s, const char delim)

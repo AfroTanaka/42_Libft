@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 10:54:51 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/17 13:25:57 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/17 13:30:28 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ static unsigned int	ft_digits_counter(int n);
 static unsigned int	ft_make_divisor(unsigned int seed);
 
 char	*ft_itoa(int n)
+/**
+ * @brief
+ * @param (n)
+ * @return (char *)
+ */
 {
 	signed char		flag;
 	unsigned int	size;
@@ -39,6 +44,11 @@ char	*ft_itoa(int n)
 }
 
 static unsigned int	ft_digits_counter(int n)
+/**
+ * @brief
+ * @param (n)
+ * @return (unsigned int)
+ */
 {
 	unsigned int	count;
 
@@ -54,6 +64,11 @@ static unsigned int	ft_digits_counter(int n)
 }
 
 static unsigned int	ft_make_divisor(unsigned int seed)
+/**
+ * @brief
+ * @param (n)
+ * @return (unsigned int)
+ */
 {
 	if (!seed)
 		return (1);
@@ -61,6 +76,11 @@ static unsigned int	ft_make_divisor(unsigned int seed)
 }
 
 static char	*ft_value_allocator(char *s, int n, unsigned int size, signed char flag)
+/**
+ * @brief
+ * @param (n)
+ * @return (char *)
+ */
 {
 	unsigned int	i;
 	unsigned int	divisor;

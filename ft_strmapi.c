@@ -6,13 +6,19 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:14:56 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/18 10:24:37 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/18 10:30:38 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+/**
+ * @brief
+ * @param (s)
+ * @param (f)
+ * @return (char *)
+ */
 {
 	size_t	size;
 	size_t	i;

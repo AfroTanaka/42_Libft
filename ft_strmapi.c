@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:14:56 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/18 10:30:38 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/18 10:36:51 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 /**
- * @brief
- * @param (s)
- * @param (f)
- * @return (char *)
+ * @brief A new string is created with malloc (3) to collect the results from the successive applications of arg2
+ * @param (s) The string on which to iterate.
+ * @param (f) The function to apply to each character.
+ * @return (char *) The string created from the successive applications of f. NULL if the allocation fails.
+ * @detail Applies the function f to each character of the string s, passing its index as the first argument and the character itself as the second.
  */
 {
 	size_t	size;

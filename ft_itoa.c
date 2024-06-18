@@ -6,22 +6,22 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 10:54:51 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/17 13:33:17 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/18 09:10:41 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char			*ft_value_allocator(char *s, int n, \
+static char			*ft_str_converter(char *s, int n, \
 		unsigned int size, signed char flag);
 static unsigned int	ft_digits_counter(int n);
 static unsigned int	ft_make_divisor(unsigned int seed);
 
 char	*ft_itoa(int n)
 /**
- * @brief
- * @param (n)
- * @return (char *)
+ * @brief Allocates (with malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled.
+ * @param (n) The integer to convert
+ * @return (char *) The string representing the integer. NULL if the allocation fails.
  */
 {
 	signed char		flag;
@@ -40,14 +40,14 @@ char	*ft_itoa(int n)
 	s = (char *)ft_calloc(size + 1, sizeof(char));
 	if (!s)
 		return (NULL);
-	return (ft_value_allocator(s, n, size, flag));
+	return (ft_str_converter(s, n, size, flag));
 }
 
 static unsigned int	ft_digits_counter(int n)
 /**
- * @brief
- * @param (n)
- * @return (unsigned int)
+ * @brief Count digits of a parameter
+ * @param (n) The integer to count
+ * @return (unsigned int) How many digits parameter has.
  */
 {
 	unsigned int	count;
@@ -65,9 +65,9 @@ static unsigned int	ft_digits_counter(int n)
 
 static unsigned int	ft_make_divisor(unsigned int seed)
 /**
- * @brief
- * @param (n)
- * @return (unsigned int)
+ * @brief Generate the divisor which is 10 to the power of seed.
+ * @param (seed) The value for the element of the power
+ * @return (unsigned int) Divisor based on 10 to the power of seed.
  */
 {
 	if (!seed)
@@ -75,12 +75,15 @@ static unsigned int	ft_make_divisor(unsigned int seed)
 	return (10 * ft_make_divisor(seed - 1));
 }
 
-static char	*ft_value_allocator(char *s, int n, \
+static char	*ft_str_converter(char *s, int n, \
 		unsigned int size, signed char flag)
 /**
- * @brief
- * @param (n)
- * @return (char *)
+ * @brief Convert the parameter2 as string.
+ * @param (s) The area to assign string from the parameter2
+ * @param (n) The value to convert as string
+ * @param (size) The number of character the parameter2 has.
+ * @param (flag) Check if the parameter2 is negative.
+ * @return (char *) The string converted from parameter2.
  */
 {
 	unsigned int	i;

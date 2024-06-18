@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 09:49:50 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/18 11:19:20 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/18 11:32:38 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ char	*ft_itoa(int n);
 // ft_strmapi
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // ft_striteri
-void 	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif

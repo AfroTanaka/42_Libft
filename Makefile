@@ -27,7 +27,8 @@ SRCS = ft_isalpha.c\
 	   ft_strtrim.c\
 	   ft_split.c\
 	   ft_itoa.c\
-	   ft_strmapi.c
+	   ft_strmapi.c\
+	   ft_striteri.c
 OBJS = ft_isalpha.o\
 	   ft_isdigit.o\
 	   ft_isalnum.o\
@@ -56,7 +57,8 @@ OBJS = ft_isalpha.o\
 	   ft_strtrim.o\
 	   ft_split.o\
 	   ft_itoa.o\
-	   ft_strmapi.o
+	   ft_strmapi.o\
+	   ft_striteri.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address

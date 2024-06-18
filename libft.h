@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 09:49:50 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/17 12:15:33 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/18 10:14:47 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 // ft_itoa
 char	*ft_itoa(int n);
+// ft_strmapi
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

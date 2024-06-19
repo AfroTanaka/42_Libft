@@ -68,7 +68,7 @@ CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_itoa.c
+MAIN = main_write_max_digits.c
 
 all: $(NAME)
 

@@ -30,7 +30,9 @@ SRCS = ft_isalpha.c\
 	   ft_strmapi.c\
 	   ft_striteri.c\
 	   ft_putchar_fd.c\
-	   ft_putstr_fd.c
+	   ft_putstr_fd.c\
+	   ft_putendl_fd.c\
+	   ft_putnbr_fd.c
 OBJS = ft_isalpha.o\
 	   ft_isdigit.o\
 	   ft_isalnum.o\
@@ -62,7 +64,9 @@ OBJS = ft_isalpha.o\
 	   ft_strmapi.o\
 	   ft_striteri.o\
 	   ft_putchar_fd.o\
-	   ft_putstr_fd.o
+	   ft_putstr_fd.o\
+	   ft_putendl_fd.o\
+	   ft_putnbr_fd.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address

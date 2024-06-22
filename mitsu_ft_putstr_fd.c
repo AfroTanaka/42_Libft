@@ -5,34 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/22 12:20:51 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/22 12:53:47 by mmiura           ###   ########.fr       */
+/*   Created: 2024/06/18 13:07:34 by mmiura            #+#    #+#             */
+/*   Updated: 2024/06/21 11:09:43 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
-#include <limits.h>
 
 void	ft_putstr_fd(char *s, int fd)
 /**
  * @brief Outputs the string `s` to the given file descriptor.
  * @param (s) The string to output
- * @param (fd) The file descriptor on which to write.
+ * @param (fd) The file descriptor on which to write
  * @return (void) None
  */
 {
-	size_t	digits;
 	size_t	i;
 
 	if (!s)
 		return ;
-	digits = ft_strlen(s);
 	i = 0;
-	while (i < digits / INT_MAX)
+	while (s[i])
 	{
-		write(fd, s + i * INT_MAX, INT_MAX);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	write(fd, s + i * INT_MAX, digits % INT_MAX);
 }

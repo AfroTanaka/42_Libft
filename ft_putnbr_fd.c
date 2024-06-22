@@ -6,15 +6,15 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 11:16:22 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/21 13:44:46 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/22 11:52:34 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_digits_counter(unsigned int n);
-unsigned int	ft_make_divisor(unsigned int digits);
-void			ft_display_nbr(unsigned int n, \
+static unsigned int	ft_digits_counter(unsigned int n);
+static unsigned int	ft_make_divisor(unsigned int digits);
+static void			ft_display_nbr(unsigned int n, \
 		unsigned int digits, unsigned int divisor, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
@@ -40,7 +40,7 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_display_nbr(tmp_n, digits, divisor, fd);
 }
 
-unsigned int	ft_digits_counter(unsigned int n)
+static unsigned int	ft_digits_counter(unsigned int n)
 /**
  * @brief
  * @param (n)
@@ -60,7 +60,7 @@ unsigned int	ft_digits_counter(unsigned int n)
 	return (count);
 }
 
-unsigned int	ft_make_divisor(unsigned int digits)
+static unsigned int	ft_make_divisor(unsigned int digits)
 /**
  * @brief
  * @param (digits)
@@ -80,7 +80,7 @@ unsigned int	ft_make_divisor(unsigned int digits)
 	return (divisor);
 }
 
-void	ft_display_nbr(unsigned int n, unsigned int digits, \
+static void	ft_display_nbr(unsigned int n, unsigned int digits, \
 		unsigned int divisor, int fd)
 /**
  * @breif

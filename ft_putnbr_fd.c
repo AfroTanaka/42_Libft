@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 11:16:22 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/22 11:52:34 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/22 12:04:25 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ static void			ft_display_nbr(unsigned int n, \
 
 void	ft_putnbr_fd(int n, int fd)
 /**
- * @brief
- * @param (n)
- * @param (fd)
- * @return (void)
+ * @brief Outputs the integer `n` to the given file descriptor.
+ * @param (n) The integer to output
+ * @param (fd) The file descriptor on which to write
+ * @return (void) None
  */
 {
 	long			tmp_n;
@@ -42,9 +42,9 @@ void	ft_putnbr_fd(int n, int fd)
 
 static unsigned int	ft_digits_counter(unsigned int n)
 /**
- * @brief
- * @param (n)
- * @return (unsigned int)
+ * @brief Count how many digits `n` has.
+ * @param (n) The target to count digits.
+ * @return (unsigned int) How many digits to return
  */
 {
 	unsigned int	count;
@@ -62,9 +62,9 @@ static unsigned int	ft_digits_counter(unsigned int n)
 
 static unsigned int	ft_make_divisor(unsigned int digits)
 /**
- * @brief
- * @param (digits)
- * @return (unsigned int)
+ * @brief Generate divisor.
+ * @param (digits) The element to make divisor
+ * @return (unsigned int) Divisor based on `digits`
  */
 {
 	unsigned int	divisor;
@@ -83,12 +83,12 @@ static unsigned int	ft_make_divisor(unsigned int digits)
 static void	ft_display_nbr(unsigned int n, unsigned int digits, \
 		unsigned int divisor, int fd)
 /**
- * @breif
- * @param (n)
- * @param (digits)
- * @param (divisor)
- * @param (fd)
- * @return (void)
+ * @breif Display `n` with write (2).
+ * @param (n) The element that wants to display
+ * @param (digits) How many digits `n` has.
+ * @param (divisor) The element is for divide `n`.
+ * @param (fd) The file descriptor on which to write
+ * @return (void) None
  */
 {
 	unsigned int	i;

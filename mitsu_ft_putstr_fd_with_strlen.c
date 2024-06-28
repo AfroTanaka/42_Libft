@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:20:51 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/29 08:39:16 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/22 12:53:47 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,17 @@ void	ft_putstr_fd(char *s, int fd)
  * @return (void) None
  */
 {
+	size_t	digits;
 	size_t	i;
 
 	if (!s)
 		return ;
-	if (!*s)
-		return ;
+	digits = ft_strlen(s);
 	i = 0;
-	while (s[i])
+	while (i < digits / INT_MAX)
 	{
-		if (i && !(i % INT_MAX))
-			write(fd, s + (i - INT_MAX), INT_MAX);
+		write(fd, s + i * INT_MAX, INT_MAX);
 		i++;
 	}
-	write(fd, s + (i - i % INT_MAX), i % INT_MAX);
+	write(fd, s + i * INT_MAX, digits % INT_MAX);
 }

@@ -77,10 +77,10 @@ MAIN = main_putnbr_fd.c
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar -rc $(NAME) $(OBJS)
+	ar -rc $(NAME) $(OBJS)
 
 $(OBJS):
-	@$(CC) $(CFLAGS) -c $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 
 re: fclean all
 

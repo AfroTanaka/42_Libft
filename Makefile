@@ -67,6 +67,8 @@ OBJS = ft_isalpha.o\
 	   ft_putstr_fd.o\
 	   ft_putendl_fd.o\
 	   ft_putnbr_fd.o
+BONUS_SRCS =
+BONUS_OBJS =
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address
@@ -81,6 +83,12 @@ $(NAME): $(OBJS)
 
 $(OBJS):
 	$(CC) $(CFLAGS) -c $(SRCS)
+
+$(BONUS_OBJS):
+	$(CC) $(CFLAGS) -c $(BONUS_SRCS)
+
+bonus:
+	ar -cq $(NAME) $(BONUS_OBJS) $(OBJS) # add BONUS_OBJS to NAME with ar -rc command
 
 re: fclean all
 
@@ -97,4 +105,4 @@ exec: re
 	@echo "\033[35mTest Done\033[m"
 
 .PHONY:
-	re all fclean clean
+	re all fclean clean bonus

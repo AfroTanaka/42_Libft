@@ -6,13 +6,19 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 09:49:50 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/21 11:14:07 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/06/29 09:19:12 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdio.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 // ft_isalnum.c
 int		ft_isalnum(int c);
@@ -82,5 +88,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 // ft_putnbr_fd
 void	ft_putnbr_fd(int n, int fd);
+// ft_lstnew
+t_list	*ft_lstnew(void *content);
 
 #endif

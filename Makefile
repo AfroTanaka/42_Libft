@@ -88,7 +88,8 @@ $(BONUS_OBJS):
 	$(CC) $(CFLAGS) -c $(BONUS_SRCS)
 
 bonus: $(BONUS_OBJS)
-	ar -qc $(NAME) $(BONUS_OBJS) # add BONUS_OBJS to NAME with ar -cq command
+	ar -rc $(NAME) $(BONUS_OBJS)
+	#ar -qc $(NAME) $(BONUS_OBJS)
 
 re: fclean all
 

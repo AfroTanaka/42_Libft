@@ -67,14 +67,14 @@ OBJS = ft_isalpha.o\
 	   ft_putstr_fd.o\
 	   ft_putendl_fd.o\
 	   ft_putnbr_fd.o
-BONUS_SRCS = ft_lstnew.c
-BONUS_OBJS = ft_lstnew.o
+BONUS_SRCS = ft_lstnew_bonus.c
+BONUS_OBJS = ft_lstnew_bonus.o
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_putnbr_fd.c
+MAIN = main_lstnew.c
 
 all: $(NAME)
 
@@ -88,19 +88,19 @@ $(BONUS_OBJS):
 	$(CC) $(CFLAGS) -c $(BONUS_SRCS)
 
 bonus: $(BONUS_OBJS)
-	ar -cq $(NAME) $(BONUS_OBJS) # add BONUS_OBJS to NAME with ar -cq command
+	ar -qc $(NAME) $(BONUS_OBJS) # add BONUS_OBJS to NAME with ar -cq command
 
 re: fclean all
 
 clean:
-	@rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
-exec: re
+exec: re $(NAME)
 	@#$(CC) $(TEST) $(TESTRUN) $(NAME) -o exec
-	@$(CC) $(CFLAGS) -g -O0 $(MAIN) $(SRCS) $(NAME) -o exec
+	@$(CC) $(CFLAGS) -g -O0 $(MAIN) $(SRCS) $(BONUS_SRCS) $(NAME) -o exec
 	@./exec
 	@echo "\033[35mTest Done\033[m"
 

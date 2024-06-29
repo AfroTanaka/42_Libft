@@ -87,9 +87,9 @@ $(OBJS):
 $(BONUS_OBJS):
 	$(CC) $(CFLAGS) -c $(BONUS_SRCS)
 
-bonus: $(BONUS_OBJS)
-	ar -rc $(NAME) $(BONUS_OBJS)
-	#ar -qc $(NAME) $(BONUS_OBJS)
+bonus: $(NAME) $(BONUS_OBJS)
+	ar -ruc $(NAME) $(BONUS_OBJS)
+	@#ar -qc $(NAME) $(BONUS_OBJS)
 
 re: fclean all
 

@@ -69,6 +69,7 @@ OBJS = ft_isalpha.o\
 	   ft_putnbr_fd.o
 BONUS_SRCS = ft_lstnew_bonus.c
 BONUS_OBJS = ft_lstnew_bonus.o
+BONUS_ARS = $(subst .o,.a,$(BONUS_OBJS))
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address
@@ -78,18 +79,19 @@ MAIN = main_lstnew.c
 
 all: $(NAME)
 
+#$(OBJS):
+#	$(CC) $(CFLAGS) -c $(SRCS)
+
+#$(BONUS_OBJS):
+#	$(CC) $(CFLAGS) -c $(BONUS_SRCS)
+
+#bonus: $(BONUS_OBJS) OBJS += $(BONUS_OBJS)
+bonus: OBJS += $(BONUS_OBJS)
+bonus: SRCS += $(BONUS_SRCS)
+bonus: $(BONUS_OBJS) $(NAME)
+
 $(NAME): $(OBJS)
 	ar -rc $(NAME) $(OBJS)
-
-$(OBJS):
-	$(CC) $(CFLAGS) -c $(SRCS)
-
-$(BONUS_OBJS):
-	$(CC) $(CFLAGS) -c $(BONUS_SRCS)
-
-bonus: $(NAME) $(BONUS_OBJS)
-	ar -ruc $(NAME) $(BONUS_OBJS)
-	@#ar -qc $(NAME) $(BONUS_OBJS)
 
 re: fclean all
 

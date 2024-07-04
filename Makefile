@@ -67,15 +67,17 @@ OBJS = ft_isalpha.o\
 	   ft_putstr_fd.o\
 	   ft_putendl_fd.o\
 	   ft_putnbr_fd.o
-BONUS_SRCS = ft_lstnew_bonus.c
-BONUS_OBJS = ft_lstnew_bonus.o
+BONUS_SRCS = ft_lstnew.c\
+			 ft_lstadd_front.c
+BONUS_OBJS = ft_lstnew.o\
+			 ft_lstadd_front.o
 ARFLAGS = -rc
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_calloc.c
+MAIN = main_structure.c
 
 all: $(OBJS) $(NAME)
 

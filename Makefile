@@ -69,29 +69,19 @@ OBJS = ft_isalpha.o\
 	   ft_putnbr_fd.o
 BONUS_SRCS = ft_lstnew_bonus.c
 BONUS_OBJS = ft_lstnew_bonus.o
-BONUS_ARS = $(subst .o,.a,$(BONUS_OBJS))
+ARFLAGS = -rc
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_lstnew.c
+MAIN = main_calloc.c
 
-all: $(NAME)
+all: $(OBJS) $(NAME)
 
-#$(OBJS):
-#	$(CC) $(CFLAGS) -c $(SRCS)
+$(NAME): $(NAME)($(OBJS))
 
-#$(BONUS_OBJS):
-#	$(CC) $(CFLAGS) -c $(BONUS_SRCS)
-
-#bonus: $(BONUS_OBJS) OBJS += $(BONUS_OBJS)
-bonus: OBJS += $(BONUS_OBJS)
-bonus: SRCS += $(BONUS_SRCS)
-bonus: $(BONUS_OBJS) $(NAME)
-
-$(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
+bonus: $(BONUS_OBJS) $(NAME)($(BONUS_OBJS))
 
 re: fclean all
 

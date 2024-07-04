@@ -6,11 +6,10 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:37:59 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/31 14:42:43 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/04 12:26:07 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

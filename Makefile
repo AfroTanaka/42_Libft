@@ -68,9 +68,11 @@ OBJS = ft_isalpha.o\
 	   ft_putendl_fd.o\
 	   ft_putnbr_fd.o
 BONUS_SRCS = ft_lstnew.c\
-			 ft_lstadd_front.c
+			 ft_lstadd_front.c\
+			 ft_lstsize.c
 BONUS_OBJS = ft_lstnew.o\
-			 ft_lstadd_front.o
+			 ft_lstadd_front.o\
+			 ft_lstsize.o
 ARFLAGS = -rc
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

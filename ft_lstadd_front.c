@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:42:54 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/06 12:57:59 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/06 13:43:12 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
  * @return (void) None
  */
 {
+	if (!lst || !new)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

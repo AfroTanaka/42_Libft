@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 10:50:58 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 14:06:13 by mmiura           ###   ########.fr       */
+/*   Created: 2024/07/04 13:42:54 by mmiura            #+#    #+#             */
+/*   Updated: 2024/07/06 13:43:12 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 /**
- * @brief Tests for a decimal digit character.
- * @param (c) This argument must be representable as an unsigned char or the value of EOF.
- * @return (int) Zero if the character tests false. Non-zero if the character tests true.
+ * @brief Adds the node `new` at the beginning of the list.
+ * @param (lst) The adress of a pointer to the first link of a list.
+ * @param (new) The addresss of a pointer to the node to be added to the list.
+ * @return (void) None
  */
 {
-	return (48 <= c && c <= 57);
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

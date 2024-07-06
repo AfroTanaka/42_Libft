@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 10:50:58 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 14:06:13 by mmiura           ###   ########.fr       */
+/*   Created: 2024/04/17 10:37:59 by mmiura            #+#    #+#             */
+/*   Updated: 2024/07/04 12:26:07 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 /**
- * @brief Tests for a decimal digit character.
- * @param (c) This argument must be representable as an unsigned char or the value of EOF.
- * @return (int) Zero if the character tests false. Non-zero if the character tests true.
+ * @brief Writes n zeroed bytes to the string s. If n is zero, it does nothing.
+ * @param (s) The string that will fill with 0 with n bytes.
+ * @param (n) How many bytes will fill with 0.
+ * @return (void) return nothing.
  */
 {
-	return (48 <= c && c <= 57);
+	(void)ft_memset(s, 0, n);
 }

@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 10:50:58 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 14:06:13 by mmiura           ###   ########.fr       */
+/*   Created: 2024/07/06 11:16:31 by mmiura            #+#    #+#             */
+/*   Updated: 2024/07/06 13:06:29 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 /**
- * @brief Tests for a decimal digit character.
- * @param (c) This argument must be representable as an unsigned char or the value of EOF.
- * @return (int) Zero if the character tests false. Non-zero if the character tests true.
+ * @brief Counts the number of nodes in a list.
+ * @param (lst) The beginning of the list
+ * @return (int) The length of the list
  */
 {
-	return (48 <= c && c <= 57);
+	t_list	*tmp;
+	int		count;
+
+	if (!lst)
+		return (0);
+	tmp = lst;
+	count = 0;
+	while (tmp != NULL)
+	{
+		count++;
+		tmp = tmp->next;
+	}
+	return (count);
 }

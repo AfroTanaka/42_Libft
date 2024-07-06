@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 11:01:16 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 13:56:31 by mmiura           ###   ########.fr       */
+/*   Created: 2024/07/06 12:10:00 by mmiura            #+#    #+#             */
+/*   Updated: 2024/07/06 13:39:46 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 /**
- * @brief Tests for any character for which ft_isalpha or ft_isdigit is true. The value of the argument must be representable as an unsigned char or the value of EOF.
- * @param (c) This argument must be representable as an unsigned char or the value of EOF.
- * @return (int) Zero if the character tests false and returns non-zero if the character tests true.
+ * @brief Adds the node `new` at the end of the list.
+ * @param (lst) The address of a pointer to the first link of a list
+ * @param (new) The address of a poiinter to the node to be added to the list
+ * @return (void) None
  */
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	t_list	*tmp;
+
+	if (!new || !lst)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	tmp = *lst;
+	tmp = ft_lstlast(tmp);
+	tmp->next = new;
 }

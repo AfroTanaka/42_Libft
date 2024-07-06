@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 10:50:58 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 14:06:13 by mmiura           ###   ########.fr       */
+/*   Created: 2024/04/23 14:17:33 by mmiura            #+#    #+#             */
+/*   Updated: 2024/05/30 15:37:02 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_toupper(int c)
 /**
- * @brief Tests for a decimal digit character.
+ * @brief Converts a lower-case letter to the corresponding upper-case letter.
  * @param (c) This argument must be representable as an unsigned char or the value of EOF.
- * @return (int) Zero if the character tests false. Non-zero if the character tests true.
+ * @return (int) Corresponding upper-case letter if it's a lower-case letter. Otherwise, the argument is returned unchanged.
  */
 {
-	return (48 <= c && c <= 57);
+	if (97 <= c && c <= 122)
+		return (c - 32);
+	return (c);
 }

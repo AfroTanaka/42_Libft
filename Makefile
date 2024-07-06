@@ -70,18 +70,20 @@ OBJS = ft_isalpha.o\
 BONUS_SRCS = ft_lstnew.c\
 			 ft_lstadd_front.c\
 			 ft_lstsize.c\
-			 ft_lstlast.c
+			 ft_lstlast.c\
+			 ft_lstadd_back.c
 BONUS_OBJS = ft_lstnew.o\
 			 ft_lstadd_front.o\
 			 ft_lstsize.o\
-			 ft_lstlast.o
+			 ft_lstlast.o\
+			 ft_lstadd_back.o
 ARFLAGS = -rc
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_structure.c
+MAIN = main_lstadd_back.c
 
 all: $(OBJS) $(NAME)
 

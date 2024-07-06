@@ -89,7 +89,7 @@ all: $(OBJS) $(NAME)
 
 $(NAME): $(NAME)($(OBJS))
 
-bonus: $(BONUS_OBJS) $(NAME)($(BONUS_OBJS))
+bonus: $(BONUS_OBJS) $(OBJS) $(NAME)($(OBJS)) $(NAME)($(BONUS_OBJS))
 
 re: fclean all
 

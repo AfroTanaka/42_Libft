@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:08:16 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/09 11:13:35 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 11:17:30 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 /**
- * @brief
- * @param
- * @param
+ * @brief Deletes and frees the given node and every sucdessor of that node, using the fuction `del` and free (3). Finally, the pointer to the list must be set to NULL.
+ * @param (lst) The address of a pointer to a node
+ * @param (del) The address of the function used to delete the content of the node.
  * @return (void) None
  */
 {
@@ -32,4 +32,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = (*lst)->next;
 		free(tmp_free);
 	}
+	lst = NULL;
 }

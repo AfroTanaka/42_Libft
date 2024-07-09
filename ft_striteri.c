@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:20:02 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/18 11:32:19 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 12:04:38 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 	size_t	size;
 
-	if (!s)
+	if (s == NULL || f == NULL)
 		return ;
 	size = ft_strlen(s);
 	i = 0;

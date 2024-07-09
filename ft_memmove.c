@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:32:30 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 14:35:37 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 11:56:10 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char			*temp_dst;
 	const char		*temp_src;
 
-	if (!dst && !src)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	temp_dst = dst;
 	temp_src = src;

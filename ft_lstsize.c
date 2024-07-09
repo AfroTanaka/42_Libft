@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 11:16:31 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/06 13:06:29 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 11:54:15 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_lstsize(t_list *lst)
 	t_list	*tmp;
 	int		count;
 
-	if (!lst)
+	if (lst == NULL)
 		return (0);
 	tmp = lst;
 	count = 0;

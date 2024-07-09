@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:20:51 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/04 12:00:07 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 12:00:31 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
-	if (!s)
+	if (s == NULL)
 		return ;
 	if (!*s)
 		return ;

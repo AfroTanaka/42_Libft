@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 10:14:56 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/18 10:36:51 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 12:06:49 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*ret;
 
-	if (!s)
+	if (s == NULL || f == NULL)
 		return (NULL);
 	size = ft_strlen(s);
 	ret = ft_calloc(size + 1, sizeof(char));
-	if (!ret)
+	if (ret == NULL)
 		return (NULL);
 	i = 0;
 	while (i < size)

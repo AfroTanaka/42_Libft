@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 10:47:14 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 14:52:56 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 12:03:56 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(const char *s1)
 	s1_len = ft_strlen(s1);
 	s1_element_size = sizeof(s1[0]);
 	ret = (char *)ft_calloc(s1_len + 1, s1_element_size);
-	if (!ret)
+	if (ret == NULL)
 	{
 		errno = 0;
 		errno = ENOMEM;

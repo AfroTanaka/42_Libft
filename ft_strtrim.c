@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:19:44 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/31 14:35:00 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 12:11:27 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	size;
 
-	if (!s1 || !set)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
 	start = ft_ltrim(s1, set);
 	if (!s1[start])

@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:25:35 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/01 10:06:23 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 11:55:27 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char		*temp_dst;
 	const unsigned char	*temp_src;
 
-	if (!dst && !src)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	i = 0;
 	temp_dst = dst;

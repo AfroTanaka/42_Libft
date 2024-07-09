@@ -72,13 +72,15 @@ BONUS_SRCS = ft_lstnew.c\
 			 ft_lstsize.c\
 			 ft_lstlast.c\
 			 ft_lstadd_back.c\
-			 ft_lstdelone.c
+			 ft_lstdelone.c\
+			 ft_lstclear.c
 BONUS_OBJS = ft_lstnew.o\
 			 ft_lstadd_front.o\
 			 ft_lstsize.o\
 			 ft_lstlast.o\
 			 ft_lstadd_back.o\
-			 ft_lstdelone.o
+			 ft_lstdelone.o\
+			 ft_lstclear.o
 ARFLAGS = -rc
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

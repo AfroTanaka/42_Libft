@@ -4,7 +4,14 @@
 
 int main()
 {
-	t_list	*temp;
-	temp = ft_lstnew("Hello");
-	free(temp);
+	t_list	*tmp;
+	int i;
+
+	i = 42;
+	tmp = ft_lstnew(&i);
+	printf("%d\n", *(int*)tmp->content);
+	if (tmp->next == NULL)
+		puts("NULL");
+	free(tmp->content);
+	free(tmp);
 }

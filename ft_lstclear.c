@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:08:16 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/09 11:17:30 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/11 19:29:46 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst != NULL)
 	{
-		tmp_free = *lst;
+		/*tmp_free = *lst;
 		del((*lst)->content);
 		*lst = (*lst)->next;
-		free(tmp_free);
+		free(tmp_free);*/
+		tmp_free = *lst;
+		*lst = (*lst)->next;
+		ft_lstdelone(tmp_free, del);
 	}
 	lst = NULL;
 }

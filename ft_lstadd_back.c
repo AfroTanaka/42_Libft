@@ -6,11 +6,12 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 12:10:00 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/09 11:47:14 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/11 19:23:24 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 /**
@@ -26,10 +27,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	if (*lst == NULL)
 	{
-		*lst = new;
+		*lst = ft_lstnew(new->content);
 		return ;
 	}
 	tmp = *lst;
 	tmp = ft_lstlast(tmp);
-	tmp->next = new;
+	tmp->next = ft_lstnew(new->content);
 }

@@ -9,10 +9,11 @@ static void destructor() {
 
 void *ft_map(void *ct);
 void ft_del(void *content);
+void *map_length(void *s);
 
 int main()
 {
-	t_list *elem;
+	/*t_list *elem;
 	t_list *elem2;
 	t_list *elem3;
 	t_list *elem4;
@@ -42,7 +43,38 @@ int main()
 	{
 		printf("%s\n", result->content);
 		result = result->next;
+	}*/
+	t_list *new = ft_lstnew("hello!");
+	printf("Addr of new->content: %p\n", new->content);
+	t_list *res = ft_lstmap(new, map_length, ft_del);
+	t_list *tmp;
+
+	tmp = res;
+	if (res == NULL)
+	{
+		ft_lstclear(&new, &ft_del);
+		return (1);
 	}
+	while (res != NULL)
+	{
+		printf("%s\n", res->content);
+		res = res->next;
+	}
+	puts("Catch");
+	ft_lstclear(&tmp, &ft_del);
+	puts("Catch");
+	free(new);
+	new = NULL;
+	return 0;
+}
+
+void *map_length(void *s)
+{
+	char *str = malloc(30);
+	printf("str: %p\n", str);
+	if (str != NULL)
+		sprintf(str, "__%lX", ft_strlen((char *)s));
+	return str;
 }
 
 void *ft_map(void *ct)

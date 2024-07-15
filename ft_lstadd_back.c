@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 12:10:00 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/11 19:45:31 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/15 13:17:11 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	if (*lst == NULL)
 	{
-		//*lst = ft_lstnew(new->content);
 		*lst = new;
 		return ;
 	}
 	tmp = *lst;
 	tmp = ft_lstlast(tmp);
-	//tmp->next = ft_lstnew(new->content);
 	tmp->next = new;
 }

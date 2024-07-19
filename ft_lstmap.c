@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 13:45:01 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/15 13:25:26 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/19 21:12:58 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	tmp = NULL;
 	while (lst != NULL)
 	{
-		f_res = f(lst->content);
-		tmp = ft_lstnew(f_res);
+		//f_res = f(lst->content);
+		//tmp = ft_lstnew(f_res);
+		tmp = ft_lstnew(f(lst->content));
 		if (tmp == NULL)
 		{
 			free(f_res);

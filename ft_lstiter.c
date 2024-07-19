@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:22:28 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/09 11:30:35 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/19 16:24:46 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst != NULL)
 	{
-		f(lst -> content);
+		if (lst->content != NULL)
+			f(lst->content);
 		lst = lst->next;
 	}
 }

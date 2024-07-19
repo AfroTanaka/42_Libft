@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 11:16:31 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/09 11:54:15 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/19 16:30:13 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,15 @@ int	ft_lstsize(t_list *lst)
  * @return (int) The length of the list
  */
 {
-	t_list	*tmp;
 	int		count;
 
 	if (lst == NULL)
 		return (0);
-	tmp = lst;
 	count = 0;
-	while (tmp != NULL)
+	while (lst != NULL)
 	{
 		count++;
-		tmp = tmp->next;
+		lst = lst->next;
 	}
 	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 11:15:04 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/21 11:29:35 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 11:57:06 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putendl_fd(char *s, int fd)
  * @return (void) None
  */
 {
-	if (!s)
+	if (s == NULL)
 		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);

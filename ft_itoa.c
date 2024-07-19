@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 10:54:51 by mmiura            #+#    #+#             */
-/*   Updated: 2024/06/18 09:10:41 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 11:45:16 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	if (flag)
 		size += 1;
 	s = (char *)ft_calloc(size + 1, sizeof(char));
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	return (ft_str_converter(s, n, size, flag));
 }

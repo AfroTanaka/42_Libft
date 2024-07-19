@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 11:42:09 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/06 11:58:12 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 11:52:45 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,9 @@ t_list	*ft_lstlast(t_list *lst)
  * @return (t_list*) Last node of the list
  */
 {
-	t_list	*tmp;
-
-	if (!lst)
+	if (lst == NULL)
 		return (NULL);
-	tmp = lst;
-	while (tmp->next != NULL)
-		tmp = tmp->next;
-	return (tmp);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

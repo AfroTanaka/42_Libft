@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 12:23:21 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/31 14:36:35 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/09 12:04:59 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	size;
 	char	*new_s;
 
-	if (!s1 || !s2)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
 	new_s = (char *)ft_calloc(size, sizeof(char));

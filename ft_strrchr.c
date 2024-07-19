@@ -6,11 +6,10 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:01:06 by mmiura            #+#    #+#             */
-/*   Updated: 2024/05/30 15:31:43 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/20 03:19:31 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

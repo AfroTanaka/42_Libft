@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:48:16 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/09 13:30:49 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/19 16:34:23 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,14 @@ void	*ft_memchr(const void *buf, int ch, size_t n)
  */
 {
 	size_t				i;
-	const unsigned char	*temp;
-	const int			*buf_int;
+	const unsigned char	*tmp;
 
 	i = 0;
-	temp = buf;
-	buf_int = buf;
+	tmp = buf;
 	while (i < n)
 	{
-		if (temp[i] == (unsigned char)ch)
-			return ((void *)(temp + i));
+		if (tmp[i] == (unsigned char)ch)
+			return ((void *)(tmp + i));
 		i++;
 	}
 	return (NULL);

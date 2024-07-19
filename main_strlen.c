@@ -4,6 +4,6 @@
 
 int main()
 {
-	//printf("%zu\n", strlen(NULL));
-	printf("%zu\n", ft_strlen(NULL));
+	printf("%zu\n", strlen(NULL));
+	//printf("%zu\n", ft_strlen(NULL));
 }

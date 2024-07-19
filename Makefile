@@ -91,7 +91,7 @@ CFLAGS = -Wall -Wextra -Werror
 #CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 #TEST = TestCode/libft_test.c TestCode/testFt*.c
 #TESTRUN = TestRunner/testRunner.c
-MAIN = main_lstmap.c
+MAIN = main_strnstr.c
 
 all: $(OBJS) $(NAME)
 

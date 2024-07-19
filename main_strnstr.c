@@ -62,6 +62,6 @@ int main()
 	/*printf("original: %s\n",strnstr(((void *)0), "fake", 3));
 	printf("mine: %s\n",ft_strnstr(((void *)0), "fake", 3));*/
 
-	printf("original: %s\n",strnstr(((void *)0), "fake", 0));
-	//printf("mine: %s\n",ft_strnstr(((void *)0), "fake", 0));
+	//printf("original: %s\n",strnstr("fake", NULL, 0));
+	printf("mine: %s\n",ft_strnstr("fake", NULL, 0));
 }

@@ -9,12 +9,14 @@
 
 int main()
 {
-	//char s[] = "Hello";
+	char s[] = "Hello";
 	//printf("original: %s\nmine: %s\n",memcpy(((void *)0), ((void *)0), 3), ft_memcpy(((void *)0), ((void *)0), 3));
-	printf("original: %s\n",memcpy(((void *)0), ((void *)0), 3));
+	//printf("original: %s\n",memcpy(((void *)0), ((void *)0), 3));
 	//printf("original: %s\n",memcpy(((void *)0), s, 3));
 	//printf("original: %s\n",memcpy(s, ((void *)0), 3));
 	//printf("mine: %s\n",ft_memcpy(((void *)0), ((void *)0), 3));
 	//printf("mine: %s\n",ft_memcpy(((void *)0), s, 3));
 	//printf("mine: %s\n",ft_memcpy(s, ((void *)0), 3));
+	//printf("original: %s\n",memcpy(s, NULL, 3));
+	printf("mine: %s\n",ft_memcpy(s, NULL, 3));
 }

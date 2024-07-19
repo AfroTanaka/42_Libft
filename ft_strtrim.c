@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:19:44 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/09 12:11:27 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/19 16:58:37 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	end = ft_rtrim(s1, set);
 	size = end - start + 1;
-	if (size <= 0)
-		return (ft_strdup(""));
 	return (ft_substr(s1, start, size));
 }
 

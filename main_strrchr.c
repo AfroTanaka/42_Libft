@@ -37,10 +37,12 @@ int main()
 	*/
 	
 	
-	char str3[] = "bonjourno";
+	/*char str3[] = "bonjourno";
 	printf("strlen: %lu\nsizeof: %lu\n", strlen(str3), sizeof(str3));
 	char *p_original = strrchr(str3, 'o');
 	char *p_mine = ft_strrchr(str3, 'o');
 	printf("original: %p\nmin: %p\n",p_original, p_mine);
-	printf("original: %s\nmin: %s\n",p_original, p_mine);
+	printf("original: %s\nmin: %s\n",p_original, p_mine);*/
+	//printf("original: %s\n",strrchr("Hello", 0));
+	printf("mine: %s\n",ft_strrchr("Hello", 0));
 }

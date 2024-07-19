@@ -24,6 +24,6 @@ int main()
 	printf("s_addr: %p\np_s_addr: %p\n", &s[strlen(s)], p_s);
 	printf("original: %s\n", p_s);
 	*/
-	printf("original: %p\n", strchr("teste", 1024));
-	printf("mine: %p\n", ft_strchr("teste", 1024));
+	//printf("original: %s\n", strchr("Hello", 0));
+	printf("mine: %s\n", ft_strchr("Hello", 0));
 }

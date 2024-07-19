@@ -6,7 +6,7 @@
 /*   By: mmiura <mmiura@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 10:25:18 by mmiura            #+#    #+#             */
-/*   Updated: 2024/07/19 16:19:02 by mmiura           ###   ########.fr       */
+/*   Updated: 2024/07/19 16:22:32 by mmiura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
  * @detail The memory of `lst->next` must not be freed.
  */
 {
-	//if (lst == NULL || lst->content == NULL || del == NULL)
 	if (lst == NULL || del == NULL)
 		return ;
 	if (lst->content != NULL)

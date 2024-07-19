@@ -88,10 +88,6 @@ BONUS_OBJS = ft_lstnew.o\
 ARFLAGS = -rc
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-#CFLAGS = -Wall -Wextra -Werror -fsanitize=address
-#TEST = TestCode/libft_test.c TestCode/testFt*.c
-#TESTRUN = TestRunner/testRunner.c
-MAIN = main_strchr.c
 
 all: $(OBJS) $(NAME)
 
@@ -106,12 +102,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-
-exec: re $(NAME)
-	@#$(CC) $(TEST) $(TESTRUN) $(NAME) -o exec
-	@$(CC) $(CFLAGS) -g -O0 $(MAIN) $(SRCS) $(BONUS_SRCS) $(NAME) -o exec
-	@./exec
-	@echo "\033[35mTest Done\033[m"
 
 .PHONY:
 	re all fclean clean bonus
